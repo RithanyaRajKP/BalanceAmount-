@@ -43,7 +43,7 @@ const ExpenseTracker: React.FC = () => {
   const handleRemove = () => {
     if (parseInt(amount) <= totalAmount) {
       if (!amount) {
-      setError("Insufficient balance.");
+      setError("Please enter valid amount.");
       return;
     }
     const newRExpense: Expense = {
@@ -58,7 +58,7 @@ const ExpenseTracker: React.FC = () => {
     setAmount("");
     }
     else{
-       setError("Please enter valid amount.");
+      setError("Insufficient balance.");
        return;
     }
     
