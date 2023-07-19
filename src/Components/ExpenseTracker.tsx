@@ -43,7 +43,7 @@ const ExpenseTracker: React.FC = () => {
   const handleRemove = () => {
     if (parseInt(amount) <= totalAmount) {
       if (!amount) {
-      setError("Please enter amount.");
+      setError("Insufficient balance.");
       return;
     }
     const newRExpense: Expense = {
@@ -102,7 +102,7 @@ const ExpenseTracker: React.FC = () => {
             >
               Remove
             </button>
-            {error && <p>{error}</p>}
+            {error && <p className="text-red-500">{error}</p>}
           </form>
         </div>
         <div className="h-2/5 border-2 text-lg font-medium px-4 py-6">
